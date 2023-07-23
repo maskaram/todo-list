@@ -8,24 +8,87 @@
  </head>
  <body>
     <div class="todo">
-        <div class="todo_head"></div>
+        <div class="todo_head">To Do List</div>
         <div class="todo_content">
             <div class="todo_content_items">
-            <div 
-            class="todo_content_single">
-            <div 
-            class="todo_content_single_
-            top"></div>
-            <div
-             class="todo_content_single_
-             title"></div>
+                <div class="todo_content_single">
+                    <div class="todo_content_single top">
+                        <div class="flex"> 
+                            <div class="todo_content_single_checkbox"><img src="./images/check-solid.svg"></div>
+                            <div
+                            class="todo_content_single_time">2023-07-01<span class="time" >03:34</span></div> 
+                        </div>
+                        <div class="flex">
+                            <div          class="todo_content_single_edit hide"><img src="./images/pen-to-square-solid.svg"alt=""/></div>
+                                <div
+                                class="todo_content_single_delete hide"><img src="./images/
+                               trash-can-regular.svg"/></div>
+                               <div        class="todo_content_single_more" ><img src="./images/ellipsis-solid.svg" alt=""/></div>
+                            </div>
+                        </div> 
+                        <div
+        class="todo_content_single_title">task 1</div>
+        <div class="todo_content_single_description">task description 1</div>
+                         </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+       
         
         </div>
-    </div>
-            <div class="taskmanager_form"></div>
-            <div class="task_add_new"></div>
+      </div>
+        <div class="taskmanger_form"></div>
+        <div class="tasks_add_new">
+            <button
+            class="todo_add_new_btn" Add New Task></button>    
         </div>
-
+          
+        
+                
+                
+            <form class="taskmanager_form hide" id="for" action="submit">
+                <label type="text" name="task_status" id="task_status" class="hide"><br>
+                <label for="date">Date</label>
+                <label type="text" name="date" id="date"reqaired><br></label>
+                <label for="time">Time</label>
+                <label type="time" name="time" id="time"reqaired><br></label>
+                <label for="task">Title</label>
+                <label type="text" name="task" id="task"reqaired><br></label>
+                <label for="description">Description</label>
+                <textarea type="text" name="description" id="description"reqaired rows="6"></textarea><br>
+                <button class="cancel btn"cancel></button>
+                <button class= "add_task btn" type="sumit"  Add Task ></button>
+               
+            </form>
+            <div class="todo_add_new">
+            <button class="todo_add_new_btn btn "Add New Task></button>
+            
+            
+           
+          
+                    
+             
+           
+            
+               
+           <div
+             class="todo_content_single_
+             title">task 1</d>
+             <div class="todo_content_single_description">task description 1</div>  
+        </div>
+    </div>
+            
+             </div>
+          </div>
+        </div>
+            <div class="add_new_task">Add New Task</div>
+        </div>
+        </div>
     </div>
 
     <script src="./script.js"></script>
