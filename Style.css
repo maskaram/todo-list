@@ -1,110 +1,136 @@
 *{
     margin: 0;
-    padding: 0;
+    padding:0
 }
 :root{
-   --primary: rgb(48, 47, 47);
-   --secondary: rgb(192, 126, 4);
-   --light: white;
-   --back: rgb(167, 166, 166);
-   --completed:rgb(135, 179, 135);
+    --primary:#1a1919;
+    --secondry:rgb(223, 91, 4);
+    --light:white;
+    --gray:rgb(180, 180, 180);
+    --completed:rgb(165, 211, 165);
+
 }
 body{
-    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Grande', 'Lucida Sans Unicode', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: var(--primary);
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .flex{
     display: flex;
     align-items: center;
 }
+
 .todo{
-    width: 600px;
-    height: 80vh;
-    background-color: var(--back);
+    width:400px;
+    height:80vh;
+    background-color: var(--gray);
     border-radius: 1rem;
     padding: 1rem;
 }
-.todo_head{
+.todo__head{
+    border-top-left-radius:1rem ;
+    border-top-right-radius:1rem ;
     text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
     padding: 1rem;
+    font-size: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 .todo_content_items{
-    overflow-y: scroll; 
-    height: 66vh;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    overflow: -moz-scrollbars-none;
+    overflow-y: scroll;
+    height:66vh;
 }
 ::-webkit-scrollbar{
     display: none;
 }
 .todo_content_single{
     background-color: var(--light);
-    padding:0.8rem;
-    border-radius: 0.5rem ;
-    margin: 0.5rem; 0;
+    margin:0.5rem 0;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    color: black;
 }
-.todo_content_single_top{
-    display: flex;
-    justify-content:space-between ;
+.todo_contentsingle_top{
+display: flex;
+ustify-content: space-between;
 }
-.todo_content_single img{
-    width: 1rem;
-    margin: right 0.5rem;
+.todo_contenthead_btn{
+    cursor:pointer;
 }
-.item{
+.todo_contentsingle_title{
     font-weight: bold;
-}
-.todo_content_single_title{
-    font-weight: bold;
-    text-transform:capitalize;
     padding: 0.5rem 0;
 }
-.todo_content_single_description{
+.todo_contentsingle_description{
     font-size: 0.8rem;
 }
-.todo_add_new{
-    display:flex;
-    justify-content:right ;
-    margin-top:1.5vh ;
+.todo_content_single img{
+    width:1rem;
+    padding-right: 0.5rem ;
 }
-.btn{
-    background-color: var(--secondary);
-    border: none;
+.time{
+    font-weight: bold;
+}
+.active{
+    background-color: var(--secondry);
     padding: 0.5rem 1rem;
-    border-radius: 25px
-    color var(--light)
+    border-radius: 25px;
+    color: var(--light);
 }
-.taskmanager_form{
-    display:flex;
-    flex-direction:column;
-} 
-.taskmanager_form_input,.taskmanager_form_textarea{
-    padding: 0.5rem; 
+.todo_add_new{
+    margin-top: 1.5vh;
+    place-content: right;
+    display: flex;
+    justify-content: right;
+}
+.todo_addnew_btn{
+    width:fit-content;
+    border: none;
+    font-size: 1rem;
+}
+.taskmanager__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.taskmanager_form input, .taskmanager_form textarea{
+    padding: 0.5rem ;
     border-radius: 5px;
 }
-.compeled .todo_content_single_checkbox,.compelet .todo_content_single_more.compeled_todo_content_single_description{
-   display:none
+.add__task, .cancel{
+    border: none;
+    width:fit-content;
+    margin:auto;
 }
-.compeled{
-    background-color: var(--completed);
+.taskmanager__form .flex div{
+    width:50%;
 }
-.compeled .todo_content_single_delete{
-    dsplay:"block";
-}
-.compeled .todo_content_single_title{
-    text-decoration: "flow through";  
+.taskmanager__form .flex input{
+    width:150px;
 }
 .hide{
-    display:none;
+    display: none;
 }
 
-
-  
-
+.completed .todo_contentsinglecheckbox,.completed .todocontentsinglemore,.completed .todocontentsingle_description{
+    display: none;
+}
+.completed .todo_contentsingle_delete{
+    display: block;
+}
+.completed .todo_contentsingle_title{
+    text-decoration: line-through;
+}
+.completed{
+    background-color:var(--completed)
+}
+.todo_contentsingle_checkbox:hover .right{
+    display:block;
+}
+.todo_contentsingle_checkbox:hover .box{
+    display:none;
+}

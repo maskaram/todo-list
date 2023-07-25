@@ -1,96 +1,69 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
-    <link rel="stylesheet" href="/style.css">
- </head>
- <body>
+    <title>To do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
     <div class="todo">
-        <div class="todo_head">To Do List</div>
-        <div class="todo_content">
+        <div class="todo__head">To Do List</div>
+        <div class="todo__content">
             <div class="todo_content_items">
                 <div class="todo_content_single">
-                    <div class="todo_content_single top">
-                        <div class="flex"> 
-                            <div class="todo_content_single_checkbox"><img src="./images/check-solid.svg"></div>
-                            <div
-                            class="todo_content_single_time">2023-07-01<span class="time" >03:34</span></div> 
+                <div class="todo_contentsingle_top">
+                    <div class="flex">
+                        <div class="todo_contentsingle_checkbox complete">
+                            <img src="./images/square-regular.svg" class="box"/>
+                            <img src="./images/check-solid.svg" class="right hide"/>
                         </div>
-                        <div class="flex">
-                            <div          class="todo_content_single_edit hide"><img src="./images/pen-to-square-solid.svg"alt=""/></div>
-                                <div
-                                class="todo_content_single_delete hide"><img src="./images/
-                               trash-can-regular.svg"/></div>
-                               <div        class="todo_content_single_more" ><img src="./images/ellipsis-solid.svg" alt=""/></div>
-                            </div>
-                        </div> 
-                        <div
-        class="todo_content_single_title">task 1</div>
-        <div class="todo_content_single_description">task description 1</div>
-                         </div> 
+                        <div class="todo_contentsingle_time"2023-06-25--></div> 
+                        <span
+                        class="time">10:55</span></div>
+                    </div>
+                    <div class="flex">
+                        <div class="todo_contentsingle_edit hide"><img src="./images/pen-to-square-solid.svg" alt=""></div>
+                        <div class="todo_contentsingle_delete hide"><img src="./images/trash-can-regular.svg" alt=""></div>
+                        <div class="todo_contentsingle_more">
+                        <img src="./images/ellipsis-solid.svg" alt="">
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            
-            
-            
-       
-        
-        </div>
-      </div>
-        <div class="taskmanger_form"></div>
-        <div class="tasks_add_new">
-            <button
-            class="todo_add_new_btn" Add New Task></button>    
-        </div>
-          
-        
-                
-                
-            <form class="taskmanager_form hide" id="for" action="submit">
-                <label type="text" name="task_status" id="task_status" class="hide"><br>
-                <label for="date">Date</label>
-                <label type="text" name="date" id="date"reqaired><br></label>
-                <label for="time">Time</label>
-                <label type="time" name="time" id="time"reqaired><br></label>
-                <label for="task">Title</label>
-                <label type="text" name="task" id="task"reqaired><br></label>
-                <label for="description">Description</label>
-                <textarea type="text" name="description" id="description"reqaired rows="6"></textarea><br>
-                <button class="cancel btn"cancel></button>
-                <button class= "add_task btn" type="sumit"  Add Task ></button>
-               
-            </form>
-            <div class="todo_add_new">
-            <button class="todo_add_new_btn btn "Add New Task></button>
-            
-            
-           
-          
-                    
-             
-           
-            
-               
-           <div
-             class="todo_content_single_
-             title">task 1</d>
-             <div class="todo_content_single_description">task description 1</div>  
-        </div>
-    </div>
-            
-             </div>
-          </div>
-        </div>
-            <div class="add_new_task">Add New Task</div>
-        </div>
-        </div>
-    </div>
+                <div class="todo_contentsingle_title">Design website</div>
+                <div class="todo_contentsingle_description hide">Design the home page with detailed text and images, prepare color pallate, </div>
+                </div>  
+            </div> 
+            <form class="taskmanager__form hide" id="form" action="submit" >
+                <input class='hide' type="text" name="task_status"  id="task_status" value="pending"> <br> 
 
-    <script src="./script.js"></script>
- </body>
- </html>
+                <label for="date">Date</label>
+                <input type="date" name="date"  id="date" required> <br>           
+
+                <label for="time">Time</label>
+                <input type="time" name="time"  id="time" required> <br> 
+
+                <label for="task_name ">Task</label>
+                <input type="text" name="task_name" id="task_name" required> <br> <br>
+
+                <label for="description ">Description</label>
+              <textarea type="text" name="description"  
+              id="description" rows="6" required> </textarea> <br> <br>
+              <div>
+                
+            <button  class='cancel active' >Cancel</button>
+            <button  class='add__task active' id="submit" type="submit"value="add task hide">Add task</button>
+          </div>
+
+            </form>
+      <div class="todo_add_new">
+      <button class="todo_addnew_btn active">Add New Task</button>
+  </div>
+      </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
+                
