@@ -56,7 +56,7 @@ body{
 }
 .todo_contentsingle_top{
 display: flex;
-ustify-content: space-between;
+justify-content: space-between;
 }
 .todo_contenthead_btn{
     cursor:pointer;
