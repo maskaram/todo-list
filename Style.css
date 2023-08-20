@@ -1,117 +1,135 @@
 *{
     margin: 0;
-    padding: 0;
+    padding:0
 }
 :root{
-    --primary:rgb(48, 47, 47);
-    --secondary:rgb(202, 99, 3);
+    --primary:#1a1919;
+    --secondry:rgb(223, 91, 4);
     --light:white;
-    --back:rgb(167, 166, 166);
-    --completed:rgb(135, 179, 135);
+    --gray:rgb(180, 180, 180);
+    --completed:rgb(165, 211, 165);
+
 }
 body{
-    font-family:  'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: var(--primary);
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .flex{
     display: flex;
     align-items: center;
 }
+
 .todo{
-    width: 400px;
-    height: 80vh;
-    background-color: var(--back);
+    width:400px;
+    height:80vh;
+    background-color: var(--gray);
     border-radius: 1rem;
     padding: 1rem;
 }
 .todo__head{
+    border-top-left-radius:1rem ;
+    border-top-right-radius:1rem ;
     text-align: center;
+    padding: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
-    padding: 1rem;
 }
-.todo_content_items{
+.todo__content__items{
     overflow-y: scroll;
     height:66vh;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    overflow: -moz-scrollbars-none;
 }
-::-webkit-scrollbar {
+::-webkit-scrollbar{
     display: none;
 }
-.todo_content_single{
+.todo__content__single{
     background-color: var(--light);
-    padding: 0.8rem;
+    margin:0.5rem 0;
     border-radius: 0.5rem;
-    margin: 0.5rem 0;
+    padding: 0.8rem;
+    color: black;
 }
-.todo_contentsingle_top{
-    display: flex;
-    justify-content: space-between;
+.todo__content__single__top{
+display: flex;
+justify-content: space-between;
 }
-.todo_content_single img{
+.todo__content__head__btn{
+    cursor:pointer;
+}
+.todo__content__single__title{
+    font-weight: bold;
+    padding: 0.5rem 0;
+}
+.todo__content__single__description{
+    font-size: 0.8rem;
+}
+.todo__content__single img{
     width:1rem;
-    margin-right: 0.5rem;
+    padding-right: 0.5rem ;
 }
 .time{
     font-weight: bold;
 }
-.todo_contentsingle_title{
-    font-weight: bold;
-    text-transform: capitalize;
-    padding: 0.5rem 0;
-}
-.todo_contentsingle_description{
-    font-size: 0.8rem;
-}
-.todo_add_new{
-    display: flex;
-    justify-content: right;
-    margin-top: 1.5vh;
-}
-.btn{
-    background-color: var(--secondary);
-    border: none;
+.active{
+    background-color: var(--secondry);
     padding: 0.5rem 1rem;
     border-radius: 25px;
     color: var(--light);
 }
-
+.todo__add__new{
+    margin-bottom: 1vh;
+    place-content: right;
+    display: flex;
+    justify-content: right;
+}
+.todo__add__new__btn{
+    width:fit-content;
+    border: none;
+    font-size: 1rem;
+}
 .taskmanager__form{
     display: flex;
     flex-direction: column;
+    justify-content: start;
 }
-.taskmanager_form input, .taskmanager_form textarea{
-    padding: 0.5rem;
+.taskmanager__form input, .taskmanager__form textarea{
+    padding: 0.5rem ;
     border-radius: 5px;
 }
-.completed .todo_contentsinglecheckbox, .completed .todocontentsinglemore, .completed .todocontentsingle_description {
+.add__task, .cancel{
+    border: none;
+    width:fit-content;
+    margin:auto;
+}
+.taskmanager__form .flex div{
+    width:50%;
+}
+.taskmanager__form .flex input{
+    width:150px;
+}
+.hide{
     display: none;
+}
+
+.completed .todo__content__single__checkbox,.completed .todo__content__single__more,.completed .todo__content__single__description{
+    display: none;
+}
+.completed .todo__content__single__delete{
+    display: block;
+}
+.completed .todo__content__single__title{
+    text-decoration: line-through;
 }
 .completed{
-background-color: var(--completed);
+    background-color:var(--completed)
 }
-.completed .todo_contentsingle_delete{
-display:block;
+.todo__content__single__checkbox:hover .right{
+    display:block
 }
-.completed .todo_contentsingle_title{
-text-decoration: line-through;
-}
-
-
-
-
-
-
-
-
-
-
-.hide {
-    display: none;
+.todo__content__single__checkbox:hover .box{
+    display:none
 }
